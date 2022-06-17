@@ -1,5 +1,5 @@
-import imp
 from battlefield import Battlefield
 
-battlefield = Battlefield()
-battlefield.run_game
+battlefield_one = Battlefield()
+battlefield_one.run_game()
+
