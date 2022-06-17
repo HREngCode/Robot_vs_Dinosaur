@@ -8,6 +8,7 @@ class Dinosaur:
         print(self.health)
 
     def attack(self, robot):
-        self.name = robot
+        robot = self.name
         self.health -= self.attack_power
-        print(f'explain what happened') 
+        print(f'{robot} is delivering some vicious blows') 
+        print("")

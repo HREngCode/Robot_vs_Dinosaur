@@ -7,6 +7,8 @@ class Robot:
         self.active_weapon = Weapon("Club", 10)
 
     def attack(self, dinosaur):
-        self.name = dinosaur
+        dinosaur = self.name
         self.attack_power = self.active_weapon.attack_power
         self.health -= self.attack_power
+        print(f'{dinosaur} is really dishing out punishment!!') 
+        print("")
