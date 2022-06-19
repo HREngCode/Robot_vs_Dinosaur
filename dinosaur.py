@@ -1,14 +1,15 @@
+
 class Dinosaur:
     def __init__(self, name, attack_power):
         self.name = name
         self.attack_power = attack_power
+        self.check_if_alive = True
         self.health = 100
-        print(self.name)
-        print(self.attack_power)
-        print(self.health)
-
-    def attack(self, robot):
-        robot = self.name
+    def attack(self):
         self.health -= self.attack_power
-        print(f'{robot} is delivering some vicious blows') 
-        print("")
+
+    def is_alive(self):
+        if self.health > 0:
+            self.check_if_alive == True
+        else:
+            self.check_if_alive == False
