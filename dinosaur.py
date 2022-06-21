@@ -2,11 +2,13 @@
 class Dinosaur:
     def __init__(self, name, attack_power):
         self.name = name
+        self.health = 100
         self.attack_power = attack_power
         self.check_if_alive = True
-        self.health = 100
-    def attack(self):
-        self.health -= self.attack_power
+
+    def attack(self, robot):
+        self.health -= robot
+        # return self.health
 
     def is_alive(self):
         if self.health > 0:
