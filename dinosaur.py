@@ -8,7 +8,6 @@ class Dinosaur:
 
     def attack(self, robot):
         self.health -= robot
-        # return self.health
 
     def is_alive(self):
         if self.health > 0:

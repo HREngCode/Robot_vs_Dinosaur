@@ -12,7 +12,6 @@ class Robot:
         self.health -= dinosaur
         return self.health
 
-
     def is_alive(self):
         if self.health > 0:
             self.check_if_alive == True
