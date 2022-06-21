@@ -1,10 +1,11 @@
 from robot import Robot
 from dinosaur import Dinosaur
 
+
 class Battlefield:
     def __init__(self):
         self.robot = Robot("Sparky")
-        self.dinosaur = Dinosaur("Rocky", 15)
+        self.dinosaur = Dinosaur("Rocky")
 
     def run_game(self):
         self.display_welcome()
@@ -16,15 +17,8 @@ class Battlefield:
 
     def battle_phase(self):
         while self.robot.health > 0 and self.dinosaur.health > 0:
-            self.robot.attack(self.dinosaur.attack_power)
-            print(f'{self.robot.name} lands a crushing shot with a total damage of {self.robot.attack_power}!!!')
-            print(f'{self.dinosaur.name} gets knocked back and is now at  {self.dinosaur.health} health')
-            print("")
-            self.dinosaur.attack(self.robot.attack_power)
-            print(f'{self.dinosaur.name} delivers a powerful blow causing a damage of {self.dinosaur.attack_power}!!') 
-            print(f'{self.robot.name} takes a shot and is now at {self.robot.health} health')
-            print("")
-
+            self.robot.attack(self.dinosaur)
+            self.dinosaur.attack(self.robot)
         self.display_winner()
                 
 
